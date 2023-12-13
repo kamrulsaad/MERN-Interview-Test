@@ -1,13 +1,13 @@
 import express from 'express';
+import { DrawingRoutes } from '../modules/drawings/drawing.routes';
 
 const router = express.Router();
 
 const moduleRoutes = [
-  // ... routes
   {
-    path: "",
-    routes: ""
-  }
+    path: '/drawings',
+    route: DrawingRoutes,
+  },
 ];
 
 moduleRoutes.forEach(route => router.use(route.path, route.route));
