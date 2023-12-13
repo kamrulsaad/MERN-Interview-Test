@@ -1,10 +1,9 @@
-import PencilTool from "./components/penciltool";
+import DrawingTool from "./components/drawingtool";
 
 function App() {
   return (
     <div className="App">
-      <PencilTool />
-      {/* <DrawingTool /> */}
+      <DrawingTool />
     </div>
   );
 }
