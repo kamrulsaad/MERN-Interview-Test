@@ -1,5 +1,6 @@
 import mongoose, { Schema } from 'mongoose';
 import {
+  Drawing,
   DrawingDocument,
   Line,
   Shape,
@@ -51,6 +52,11 @@ const TextAnnotationModel = mongoose.model<TextAnnotation>(
   'TextAnnotation',
   TextAnnotationSchema
 );
-const DrawingModel = mongoose.model<DrawingDocument>('Drawing', DrawingSchema);
+const Drawing = mongoose.model<DrawingDocument>('Drawing', DrawingSchema);
 
-export { LineModel, ShapeModel, TextAnnotationModel, DrawingModel };
+export const DrawingModel = {
+  Drawing,
+  LineModel,
+  ShapeModel,
+  TextAnnotationModel,
+};
